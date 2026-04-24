@@ -1,0 +1,43 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  font-size: 20px;
+}
+
+/* Layout */
+#content {
+  max-width: 60%;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #fff;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #aaa;
+  margin: 1rem 0;
+}
+
+/* Typography */
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
+
+/* Topics section */
+#topics h2 {
+  color: darkblue;
+}
+
+
