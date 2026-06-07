@@ -42,6 +42,12 @@ form {
   gap: 0.35rem;
 }
 
+.helper {
+  margin: 0;
+  color: #3f523f;
+  font-size: 0.9rem;
+}
+
 .full {
   grid-column: 1 / 3;
 }
@@ -117,6 +123,11 @@ button:focus-visible {
   padding: 1rem;
   border-radius: 12px;
   background: #eef5ec;
+}
+
+#output:focus {
+  outline: 2px solid #5b8c5a;
+  outline-offset: 2px;
 }
 
 #output.error {
