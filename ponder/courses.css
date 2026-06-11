@@ -34,6 +34,20 @@ h2 {
   margin-bottom: 1rem;
 }
 
+#enrollStatus {
+  min-height: 1.25rem;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+#enrollStatus.success {
+  color: #1f5f2f;
+}
+
+#enrollStatus.error {
+  color: #8a1f1f;
+}
+
 label {
   font-weight: 700;
 }

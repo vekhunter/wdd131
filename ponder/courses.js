@@ -20,13 +20,16 @@ const aCourse = {
   ],
   enrollStudent: function (sectionNum) {
     const sectionIndex = this.sections.findIndex(
-      (section) => section.sectionNum == sectionNum
+      (section) => section.sectionNum === sectionNum
     );
 
     if (sectionIndex >= 0) {
       this.sections[sectionIndex].enrolled++;
       renderSections(this.sections);
+      return true;
     }
+
+    return false;
   }
 };
 
@@ -53,7 +56,37 @@ function renderSections(sections) {
 setCourseInfo(aCourse);
 renderSections(aCourse.sections);
 
-document.querySelector("#enrollStudent").addEventListener("click", function () {
-  const sectionNum = document.querySelector("#sectionNumber").value;
-  aCourse.enrollStudent(sectionNum);
+function showStatus(message, isError) {
+  const statusEl = document.querySelector("#enrollStatus");
+  statusEl.textContent = message;
+  statusEl.className = isError ? "error" : "success";
+}
+
+function handleEnrollment() {
+  const inputEl = document.querySelector("#sectionNumber");
+  const sectionNum = Number.parseInt(inputEl.value, 10);
+
+  if (!Number.isInteger(sectionNum)) {
+    showStatus("Enter a valid section number.", true);
+    return;
+  }
+
+  const enrolled = aCourse.enrollStudent(sectionNum);
+  if (enrolled) {
+    showStatus(`Student enrolled in section ${sectionNum}.`, false);
+    inputEl.value = "";
+    inputEl.focus();
+    return;
+  }
+
+  showStatus(`Section ${sectionNum} was not found.`, true);
+}
+
+document.querySelector("#enrollStudent").addEventListener("click", handleEnrollment);
+
+document.querySelector("#sectionNumber").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    handleEnrollment();
+  }
 });
