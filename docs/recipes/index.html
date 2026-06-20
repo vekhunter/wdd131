@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book | Apple Crisp</title>
+  <meta name="description" content="A clean, responsive recipe page featuring a classic apple crisp recipe.">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recipe Book | Apple Crisp">
+  <meta property="og:description" content="Bake a warm apple crisp with this easy recipe.">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/recipes/">
+  <meta property="og:image" content="images/apple-crisp.jpg">
+
+  <!-- X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recipe Book | Apple Crisp">
+  <meta name="twitter:description" content="Bake a warm apple crisp with this easy recipe.">
+  <meta name="twitter:image" content="images/apple-crisp.jpg">
+
+  <link rel="icon" href="images/recipe-book.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-row">
+      <img src="images/recipe-book.png" alt="Recipe book logo" class="site-logo" width="64" height="64">
+      <h1>Recipe Book</h1>
+    </div>
+  </header>
+
+  <main>
+    <form class="search" action="#" method="get" role="search">
+      <label for="recipeSearch" class="visually-hidden">Search recipes</label>
+      <input id="recipeSearch" name="q" type="search" placeholder="Find a recipe" aria-label="Find a recipe">
+      <button type="submit" aria-label="Search">
+        <img src="images/search.svg" alt="" width="20" height="20">
+      </button>
+    </form>
+
+    <article class="recipe-card">
+      <img src="images/apple-crisp.jpg" alt="A bowl of apple crisp topped with vanilla ice cream" class="recipe-image" width="640" height="427">
+      <div class="recipe-content">
+        <p class="tag">Dessert</p>
+        <h2>Apple Crisp</h2>
+        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star-empty">☆</span>
+        </span>
+        <p class="description">
+          This apple crisp is a simple, comforting dessert with tender cinnamon apples and a buttery oat topping.
+          Serve it warm with whipped cream or a scoop of vanilla ice cream.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+      <a href="#" aria-label="Instagram"><img src="images/instagram_icon.svg" alt="Instagram icon" width="40" height="40"></a>
+      <a href="#" aria-label="YouTube"><img src="images/youtube_icon.svg" alt="YouTube icon" width="40" height="40"></a>
+      <a href="#" aria-label="Pinterest"><img src="images/pinterest_icon.svg" alt="Pinterest icon" width="40" height="40"></a>
+    </div>
+    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+  </footer>
+</body>
+</html>
