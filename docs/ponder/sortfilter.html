@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 Ponder - Sorting and Filtering</title>
+    <meta name="description" content="Week 10 ponder assignment for sorting and filtering hikes.">
+    <meta name="author" content="Garrett Christensen">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="sortfilter.css">
+    <script src="sortfilter.js" defer></script>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Hike Finder</h1>
+
+      <div class="search-row">
+        <label for="search">Enter Search</label>
+        <input id="search" type="text" placeholder="Name, description, or tag">
+        <button id="searchButton" type="button">Search</button>
+      </div>
+
+      <div id="hike-container" aria-live="polite"></div>
+    </main>
+  </body>
+</html>
