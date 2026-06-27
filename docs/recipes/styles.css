@@ -57,6 +57,12 @@ main {
   gap: 1.25rem;
 }
 
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .search {
   display: flex;
   gap: 0;
@@ -99,6 +105,12 @@ main {
   padding: 1rem;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
 .tag {
   align-self: flex-start;
   border: 1px solid #888;
@@ -120,6 +132,13 @@ h2 {
 .description {
   margin: 0;
   line-height: 1.6;
+}
+
+.empty-message {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0;
 }
 
 footer {

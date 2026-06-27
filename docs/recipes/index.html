@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe Book | Apple Crisp</title>
-  <meta name="description" content="A clean, responsive recipe page featuring a classic apple crisp recipe.">
+  <title>Recipe Book</title>
+  <meta name="description" content="Browse and search a recipe collection.">
 
   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Recipe Book | Apple Crisp">
-  <meta property="og:description" content="Bake a warm apple crisp with this easy recipe.">
-  <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/recipes/">
+  <meta property="og:title" content="Recipe Book">
+  <meta property="og:description" content="Browse and search a recipe collection.">
+  <meta property="og:url" content="https://vekhunter.github.io/wdd131/recipes/">
   <meta property="og:image" content="images/apple-crisp.jpg">
 
   <!-- X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Recipe Book | Apple Crisp">
-  <meta name="twitter:description" content="Bake a warm apple crisp with this easy recipe.">
+  <meta name="twitter:title" content="Recipe Book">
+  <meta name="twitter:description" content="Browse and search a recipe collection.">
   <meta name="twitter:image" content="images/apple-crisp.jpg">
 
   <link rel="icon" href="images/recipe-book.png">
@@ -36,7 +36,7 @@
   </header>
 
   <main>
-    <form class="search" action="#" method="get" role="search">
+    <form class="search" action="#" method="get" role="search" id="searchForm">
       <label for="recipeSearch" class="visually-hidden">Search recipes</label>
       <input id="recipeSearch" name="q" type="search" placeholder="Find a recipe" aria-label="Find a recipe">
       <button type="submit" aria-label="Search">
@@ -44,24 +44,7 @@
       </button>
     </form>
 
-    <article class="recipe-card">
-      <img src="images/apple-crisp.jpg" alt="A bowl of apple crisp topped with vanilla ice cream" class="recipe-image" width="640" height="427">
-      <div class="recipe-content">
-        <p class="tag">Dessert</p>
-        <h2>Apple Crisp</h2>
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-        <p class="description">
-          This apple crisp is a simple, comforting dessert with tender cinnamon apples and a buttery oat topping.
-          Serve it warm with whipped cream or a scoop of vanilla ice cream.
-        </p>
-      </div>
-    </article>
+    <div id="recipeList" class="recipe-list" aria-live="polite"></div>
   </main>
 
   <footer>
@@ -73,5 +56,6 @@
     </div>
     <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
