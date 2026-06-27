@@ -15,10 +15,7 @@ body {
   margin: 0;
   font-family: "DM Sans", Arial, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 10% 5%, rgba(180, 255, 120, 0.45), transparent 38%),
-    radial-gradient(circle at 85% 0%, rgba(126, 211, 33, 0.22), transparent 30%),
-    #eef8db;
+  background: #b9ff3b;
 }
 
 .site-header,
