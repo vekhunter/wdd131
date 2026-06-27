@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   font-family: "DM Sans", Arial, sans-serif;
@@ -102,6 +103,7 @@ main {
   width: 100%;
   display: block;
   object-fit: cover;
+  filter: hue-rotate(38deg) saturate(1.45) brightness(0.95);
 }
 
 .recipe-content {
@@ -173,6 +175,12 @@ footer {
   display: block;
   width: 40px;
   height: 40px;
+  filter: hue-rotate(38deg) saturate(1.4) brightness(0.92);
+}
+
+.search button img,
+.site-logo {
+  filter: hue-rotate(38deg) saturate(1.4) brightness(0.92);
 }
 
 footer a {
