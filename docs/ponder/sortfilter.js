@@ -2,7 +2,7 @@ const hikes = [
   {
     name: "Bechler Falls",
     stub: "bechler_falls",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/bechler-falls.jpg",
+    imgSrc: "images/hikes/bechler-falls.jpg",
     imgAlt: "Image of Bechler Falls",
     distance: "3 miles",
     tags: ["Caves", "Yellowstone", "Waterfall"],
@@ -12,7 +12,7 @@ const hikes = [
   {
     name: "Teton Canyon",
     stub: "teton_canyon",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/teton-canyon.jpg",
+    imgSrc: "images/hikes/teton-canyon.jpg",
     imgAlt: "Image of Teton Canyon",
     distance: "3 miles",
     tags: ["Canyon", "Tetons"],
@@ -22,7 +22,7 @@ const hikes = [
   {
     name: "Denanda Falls",
     stub: "denanda_falls",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/denanda-falls.jpg",
+    imgSrc: "images/hikes/denanda-falls.jpg",
     imgAlt: "Image of Denanda Falls",
     distance: "7 miles",
     tags: ["Caves", "Yellowstone", "Waterfall"],
@@ -32,7 +32,7 @@ const hikes = [
   {
     name: "Coffee Pot Rapids",
     stub: "coffee_pot",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/coffee-pot.jpg",
+    imgSrc: "images/hikes/coffee-pot.jpg",
     imgAlt: "Image of Coffee Pot Rapids",
     distance: "2.2 miles",
     tags: ["Rafting"],
@@ -42,7 +42,7 @@ const hikes = [
   {
     name: "Menan Butte",
     stub: "menan_butte",
-    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/menan-butte.jpg",
+    imgSrc: "images/hikes/menan-butte.jpg",
     imgAlt: "Image of Menan Butte",
     distance: "3.4 miles",
     tags: ["Volcanic", "View"],
@@ -111,25 +111,9 @@ function difficultyTemplate(rating) {
   return html;
 }
 
-function placeholderImageForHike(hike) {
-  const colors = ["#2266aa", "#2d7a46", "#8a4baf", "#b85b1e", "#1f7a8c"];
-  let hash = 0;
-
-  for (let i = 0; i < hike.stub.length; i += 1) {
-    hash += hike.stub.charCodeAt(i);
-  }
-
-  const color = colors[hash % colors.length];
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="${color}"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="700">${hike.name}</text></svg>`;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
 function hikesTemplate(hike) {
-  const fallbackImage = placeholderImageForHike(hike);
-
   return `<article class="hike-card">
-    <img class="hike-image" src="${hike.imgSrc}" alt="${hike.imgAlt}" onerror="this.onerror=null;this.src='${fallbackImage}'">
+    <img class="hike-image" src="${hike.imgSrc}" alt="${hike.imgAlt}">
     <div class="hike-content">
       <h2>${hike.name}</h2>
       <p class="hike-meta"><strong>Distance:</strong> ${hike.distance}</p>
