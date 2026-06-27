@@ -54,12 +54,14 @@ const hikes = [
 const hikeContainer = document.querySelector("#hike-container");
 const input = document.querySelector("#search");
 const button = document.querySelector("#searchButton");
+const fallbackImage = "../recipes/images/apple-crisp.jpg";
 
 button.addEventListener("click", search);
-input.addEventListener("keypress", handleEnter);
+input.addEventListener("keydown", handleEnter);
 
 function handleEnter(event) {
   if (event.key === "Enter") {
+    event.preventDefault();
     search();
   }
 }
@@ -112,7 +114,7 @@ function difficultyTemplate(rating) {
 
 function hikesTemplate(hike) {
   return `<article class="hike-card">
-    <img class="hike-image" src="${hike.imgSrc}" alt="${hike.imgAlt}">
+    <img class="hike-image" src="${hike.imgSrc}" alt="${hike.imgAlt}" onerror="this.onerror=null;this.src='${fallbackImage}'">
     <div class="hike-content">
       <h2>${hike.name}</h2>
       <p class="hike-meta"><strong>Distance:</strong> ${hike.distance}</p>
