@@ -54,7 +54,6 @@ const hikes = [
 const hikeContainer = document.querySelector("#hike-container");
 const input = document.querySelector("#search");
 const button = document.querySelector("#searchButton");
-const fallbackImage = "../recipes/images/apple-crisp.jpg";
 
 button.addEventListener("click", search);
 input.addEventListener("keydown", handleEnter);
@@ -112,7 +111,23 @@ function difficultyTemplate(rating) {
   return html;
 }
 
+function placeholderImageForHike(hike) {
+  const colors = ["#2266aa", "#2d7a46", "#8a4baf", "#b85b1e", "#1f7a8c"];
+  let hash = 0;
+
+  for (let i = 0; i < hike.stub.length; i += 1) {
+    hash += hike.stub.charCodeAt(i);
+  }
+
+  const color = colors[hash % colors.length];
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360"><rect width="640" height="360" fill="${color}"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="700">${hike.name}</text></svg>`;
+
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
 function hikesTemplate(hike) {
+  const fallbackImage = placeholderImageForHike(hike);
+
   return `<article class="hike-card">
     <img class="hike-image" src="${hike.imgSrc}" alt="${hike.imgAlt}" onerror="this.onerror=null;this.src='${fallbackImage}'">
     <div class="hike-content">
