@@ -2,7 +2,7 @@
   --page-max: 960px;
   --accent: #7ed321;
   --accent-dark: #4c8f0f;
-  --surface: #f7ffe8;
+  --surface: #caff57;
   --text: #1b2a10;
   --border: #b8d88d;
 }
@@ -76,7 +76,7 @@ main {
   min-height: 44px;
   border: 1px solid var(--border);
   border-right: 0;
-  background: #fff;
+  background: #d9ff85;
   padding: 0.7rem 0.9rem;
   font: inherit;
 }
@@ -121,7 +121,7 @@ main {
   align-self: flex-start;
   border: 1px solid var(--accent-dark);
   border-radius: 999px;
-  background: #f0ffd8;
+  background: #bafc40;
   padding: 0.2rem 0.55rem;
   margin: 0;
   font-size: 0.9rem;
@@ -146,7 +146,7 @@ h2 {
 .empty-message {
   border: 1px dashed var(--border);
   border-radius: 10px;
-  background: #f8ffe9;
+  background: #c7ff59;
   padding: 1rem;
   margin: 0;
 }
